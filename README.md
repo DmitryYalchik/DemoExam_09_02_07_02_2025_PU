@@ -12,8 +12,8 @@
 > Автор **не заявляет, что это единственно верный или официальный вариант**.  
 > Репозиторий создан исключительно в учебных и демонстрационных целях, чтобы показать, как, на мой взгляд, можно быстро и в соответствии с заданием выполнить работу.
 
-- [x] [Модуль 1](https://github.com/DmitryYalchik/DemoExam_09_02_07_02_2025_PU/blob/Module2/Attachments/Задание.docx)
-- [x] [Модуль 2](https://github.com/DmitryYalchik/DemoExam_09_02_07_02_2025_PU/blob/Module2/Attachments/Задание.docx)
+- [x] [Модуль 1](https://github.com/DmitryYalchik/DemoExam_09_02_07_02_2025_PU/releases/tag/Module-1)
+- [x] [Модуль 2](https://github.com/DmitryYalchik/DemoExam_09_02_07_02_2025_PU/releases/tag/Module-2)
 - [ ] Модуль 3
 - [ ] Модуль 4
 
