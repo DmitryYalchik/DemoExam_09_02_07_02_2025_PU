@@ -4,6 +4,18 @@
              xmlns:local="clr-namespace:DemoExam_09_02_07_02_2025_PU"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!--Модуль 2-->
+        <Style TargetType="{x:Type TextBlock}">
+            <Setter Property="FontFamily" Value="Constantia"/>
+        </Style>
+        <!--Модуль 2-->
+        <Style TargetType="{x:Type TextElement}">
+            <Setter Property="FontFamily" Value="Constantia"/>
+        </Style>
+        
+        <!--Модуль 2-->
+        <SolidColorBrush x:Key="PrimaryBackground" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="SecondaryBackground" Color="#BFD6F6"/>
+        <SolidColorBrush x:Key="Accent" Color="#405C73"/>
     </Application.Resources>
 </Application>

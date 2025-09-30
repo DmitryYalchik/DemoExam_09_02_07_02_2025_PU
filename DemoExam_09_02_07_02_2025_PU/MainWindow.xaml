@@ -5,8 +5,55 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemoExam_09_02_07_02_2025_PU"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Образ плюс"
+        WindowStartupLocation="CenterScreen"
+        MinHeight="720"
+        MinWidth="1200">
     <Grid>
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <!--Модуль 2-->
+        <Grid Background="{StaticResource SecondaryBackground}">
+            <Image Source="/Assets/ico.png" Margin="15" HorizontalAlignment="Right"/>
+        </Grid>
+        
+        <!--Модуль 2-->
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Grid.Row="1">
+            <ItemsControl x:Name="materialsList_IC">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Grid.Row="1" Margin="10" BorderThickness="2" BorderBrush="{StaticResource Accent}" TextElement.FontSize="16" VerticalAlignment="Top">
+                            <StackPanel Margin="10">
+                                <Grid Margin="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Type.Name}" FontSize="20"/>
+                                        <TextBlock Text=" | " FontSize="20"/>
+                                        <TextBlock Text="{Binding Name}" FontSize="20"/>
+                                    </StackPanel>
+                                    <TextBlock Grid.Column="1" Text="{Binding NeedQuantity, StringFormat='0.00 уп.'}" HorizontalAlignment="Right" FontSize="18"/>
+                                </Grid>
+                                <TextBlock Margin="5" Text="{Binding MinimalQuantity, StringFormat='Минимальное количество: {0}'}"/>
+                                <TextBlock Margin="5" Text="{Binding QuantityInStock, StringFormat='Количество на складе: {0}'}"/>
+                                <StackPanel Margin="5" Orientation="Horizontal">
+                                    <TextBlock Text="Цена: "/>
+                                    <TextBlock Text="{Binding CostPerUnit}"/>
+                                    <TextBlock Text=" р. /"/>
+                                    <TextBlock Text="{Binding Unit.ShortName}"/>
+                                    <TextBlock Text=" | "/>
+                                    <TextBlock Text="{Binding QuantityInPack, StringFormat='0.00 шт в уп'}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </Window>
